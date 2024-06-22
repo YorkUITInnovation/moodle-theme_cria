@@ -1,0 +1,21 @@
+.pagelayout-standard #page.drawers .main-inner, body.limitedwidth #page.drawers .main-inner {
+    max-width: 100% !important;
+}
+
+#page.drawers {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.card{
+    box-shadow: none !important;
+}
+
+.card-header{
+    background-color: #fff !important;
+}
+
+.card-footer{
+    background-color: #fff !important;
+}
+

@@ -1,0 +1,72 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="{{home_page}}" class="brand-link">
+        <img src="{{config.wwwroot}}/theme/cria/img/cria_logo.png" alt="{{sitename}} Logo"
+             class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">{{sitename}}</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                {{#isloggedin}}
+                    <li class="nav-item">
+                        <a href="{{home_page}}" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                {{#str}}dashboard, theme_cria{{/str}}
+                            </p>
+                        </a>
+                    </li>
+
+                    {{#navdrawer_items}}
+                        <li class="nav-item" {{#divider}}style="border-bottom: 1px solid #4f5962;"{{/divider}}>
+                            <a href="{{url}}" class="nav-link">
+                                <i class="nav-icon {{icon}}"></i>
+                                <p>
+                                    {{title}}
+                                    {{#has_submenu}}
+                                        <i class="fas fa-angle-left right"></i>
+                                        <span class="badge badge-info right">{{has_submenu}}</span>
+                                    {{/has_submenu}}
+                                </p>
+                            </a>
+                            {{#has_submenu}}
+                                <ul class="nav nav-treeview">
+                                    {{#submenu}}
+                                        <li class="nav-item" {{#divider}}style="border-bottom: 1px solid #4f5962;"{{/divider}}>
+                                            <a href="{{url}}" class="nav-link">
+                                                <i class="nav-icon {{icon}}"></i>
+                                                <p>
+                                                    {{title}}
+                                                </p>
+                                            </a>
+                                        </li>
+                                    {{/submenu}}
+                                </ul>
+                            {{/has_submenu}}
+
+                        </li>
+                    {{/navdrawer_items}}
+                    {{#is_siteadmin}}
+                        <li class="nav-item">
+                            <a href="{{config.wwwroot}}/admin/search.php" class="nav-link">
+                                <i class="nav-icon fas fa-cog"></i>
+                                <p>
+                                    {{#str}}administrationsite, core{{/str}}
+                                </p>
+                            </a>
+                        </li>
+                    {{/is_siteadmin}}
+                {{/isloggedin}}
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

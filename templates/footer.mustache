@@ -1,0 +1,93 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_boost/footer
+
+    Page footer.
+
+    Example context (json):
+    {
+        "output": {
+            "page_doc_link": "Help and documentation",
+            "supportemail": "<a href=\"#\">Contact site support</a>",
+            "has_popover_links": true,
+            "services_support": "Services and support",
+            "login_info": "You are logged in as cute kitten",
+            "moodle_release": "90210"
+        }
+    }
+}}
+
+<footer id="page-footer" class="main-footer">
+    <div class="footer-section p-3 border-bottom">
+<!--        <div class="logininfo">-->
+<!--            {{{ output.login_info }}}-->
+<!--        </div>-->
+        <div class="tool_usertours-resettourcontainer">
+        </div>
+
+        {{{ output.standard_footer_html }}}
+
+    </div>
+<!--    <div class="footer-content-debugging footer-dark bg-dark text-light">-->
+<!--        <div class="container-fluid footer-dark-inner">-->
+<!--            {{{ output.debug_footer_html }}}-->
+<!--        </div>-->
+<!--    </div>-->
+</footer>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- cria Default-->
+<script src="{{config.wwwroot}}/theme/cria/js/default.js"></script>
+<!-- ChartJS -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="{{config.wwwroot}}/theme/cria/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/moment/moment.min.js"></script>
+<script src="{{config.wwwroot}}/theme/cria/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="{{config.wwwroot}}/theme/cria/js/adminlte.min.js"></script>
+<!-- DataTables -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.13.2/af-2.5.2/b-2.3.4/b-colvis-2.3.4/b-html5-2.3.4/b-print-2.3.4/cr-1.6.1/date-1.3.0/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.2/sc-2.0.7/sb-1.4.0/sp-2.1.1/sl-1.6.0/sr-1.2.1/datatables.min.js"></script>
+<!-- Select2 -->
+<script src="{{config.wwwroot}}/theme/cria/js/select2/select2.min.js"></script>
+<!--<link rel="stylesheet" href="{{config.wwwroot}}/theme/cria/js/select2/css/select2-bootstrap4.min.css">-->
+<!-- DateTimePicker -->
+<script src="{{config.wwwroot}}/theme/cria/plugins/datetimepicker/datetimepicker.full.min.js"></script>
+
+{{{ output.standard_end_of_body_html }}}
+{{#js}}
+    require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+    });
+{{/js}}
