@@ -57,6 +57,23 @@
     <link href="{{config.wwwroot}}/theme/cria/js/select2/css/select2.min.css" rel="stylesheet" />
     <!-- DateTimePicker -->
     <link rel="stylesheet" href="{{config.wwwroot}}/theme/cria/plugins/datetimepicker/datetimepicker.min.css">
+    <style>
+        [class*="sidebar-dark-"] {
+            background-color:  #e31837 !important;
+        }
+
+        [class*="sidebar-dark-"] .sidebar a {
+            color: #fff !important;
+        }
+
+        .nav-link:focus {
+            box-shadow: 0 0 0 .2rem rgba(255,255,255,.75) !important;
+        }
+
+        [class*="sidebar-dark"] .brand-link {
+            border-bottom: 1px solid #fff !important;
+        }
+    </style>
     <!-- Moodle standard head html -->
     {{{ output.standard_head_html }}}
     <meta name="viewport" content="width=device-width, initial-scale=1">
