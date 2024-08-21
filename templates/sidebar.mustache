@@ -2,6 +2,34 @@
     .brand-link .brand-image {
         margin-left: unset;
     }
+
+    .nav-pills .nav-link {
+        color: #fff;
+    }
+
+    .nav-pills .nav-item:hover {
+        background-color: #810001 !important;
+    }
+
+    @media (max-width: 767.98px) {
+        .nav-tabs:not(.more-nav), .nav-pills {
+            text-align: left;
+            margin: 0;
+            border: 0;
+            padding: .125rem;
+            background-color: unset;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .nav-tabs:not(.more-nav) .nav-link, .nav-pills .nav-link {
+            background: #e31837;
+            border: 0;
+            margin: .125rem;
+            margin-bottom: 0.125rem;
+            text-align: left;
+        }
+    }
 </style>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
