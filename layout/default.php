@@ -43,8 +43,8 @@ require_once($CFG->dirroot . '/course/lib.php');
 
 global $PAGE, $USER, $OUTPUT;
 
-user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
-user_preference_allow_ajax_update('drawer-open-index', PARAM_BOOL);
+// Modern approach for user preferences - no need for explicit AJAX allowance
+// The core_user/repository module handles this automatically
 
 $PAGE->requires->jquery();
 $PAGE->requires->jquery_plugin('ui');

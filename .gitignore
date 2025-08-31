@@ -1,2 +1,16 @@
 ./.idea
 append_gnu.php
+/img/._.DS_Store
+/._.DS_Store
+/img/._aura_logo..png
+/img/._aura_logo.svg
+/img/._cria_logo_old.png
+/scss/._default.scss
+/css/._general.css
+/templates/._sidebar.mustache
+/img/._yorku_logo.svg
+/.idea/.gitignore
+/.idea/cria.iml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/vcs.xml
